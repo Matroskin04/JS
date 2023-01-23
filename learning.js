@@ -24,4 +24,12 @@
 // c *= a // то же,что и "c = c + a"
 // console.log(c)
 
-//             // 4  
+//             // 4 Приоритет операторов
+// const isMath = 5 - 7 >= -1 - 5  // т.к. начинается с is то выводит true/false
+// console.log(isMath)
+
+//             // 5 Условные операторов
+// const status = 'ready'
+// if (status === 'ready') {
+//     console.log('Курс готов')
+// }
