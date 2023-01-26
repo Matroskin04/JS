@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<body>
+    <script>
+let b = prompt('Введите второе число','');
+first: for ( let i = 2; i <= b; i++) {
+    for (let j = 2; j <= i; j++) {
+        if (i % j == 0 && i != j) continue first
+    }   alert(i);
+}
+    </script>
+</body>
+</html>
