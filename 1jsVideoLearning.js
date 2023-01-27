@@ -33,3 +33,9 @@
 // if (status === 'ready') {
 //     console.log('Курс готов')
 // }
+//             // 6 Функции
+function calculateAge(year){ 
+    return 2023 - year
+}
+const myAge = calculateAge(2004)
+console.log(myAge)
