@@ -5,6 +5,7 @@ const people = [
     {name: 'Ekaterina', budget: 5500},
     {name: 'Veronika', budget: 8700}
 ]
+const fib = [1,1,2,3,5,8,13]
 
 // cars.push('Porshe') // add to the end
 // cars.unshift('Lada') // в начало
@@ -25,8 +26,16 @@ const people = [
 // еще вариант
 // const person = people.find(person => person.budget === 3400)
 
+// cars.includes('Mazda') //есть ли такой элемент в массиве
+
+//Массив капсом
+const upperCaseCars = cars.map( car => {     // map создает новый массив
+    return car.toUpperCase()
+})
 
 
+const pow2Fib = fib.map( numb => numb ** 2) //элемента массива в квадрат
+console.log(pow2Fib)
 
 
 
