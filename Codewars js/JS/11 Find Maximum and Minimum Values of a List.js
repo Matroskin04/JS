@@ -6,6 +6,27 @@ let min = function(mi) {
     return Math.max(...ma)
   }
 
+  /*
+  My variant 2
+  let max = function(ma) {
+    label2: for (i = 0; i < ma.length; i++) {
+      for (j = 0; j < ma.length; j++) {
+        if (ma[i] < ma[j]) continue label2
+      }
+      return ma[i];
+    }
+  }
+  
+  let min = function(mi) {
+    label: for (i = 0; i < mi.length; i++) {
+      for (j = 0; j < mi.length; j++) {
+        if (mi[i] > mi[j]) continue label
+      }
+      return mi[i];
+    }
+  }
+  */
+
   
 
 
