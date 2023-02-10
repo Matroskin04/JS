@@ -15,7 +15,7 @@ function getObj(admin,user) {
             admin[key] = user[key]; 
         } else {
             admin[key] = {}; 
-            return getObj(admin[key],user[key]);
+            getObj(admin[key],user[key]);
         }
     }
 }
