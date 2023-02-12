@@ -8,6 +8,20 @@ function covfefe(str){
   }
 
 
+  // Another variant from codewars
+  function covfefe(str) {
+    const res = str.replace(/coverage/g, "covfefe")
+    return res === str ? str + " covfefe" : res
+  }
+
+
+
+
+
+
+
+
+
 /*
 Your are given a string. You must replace any occurence of the sequence coverage 
 by covfefe, however, if you don't find the word coverage in the string, 
