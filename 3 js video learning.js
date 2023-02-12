@@ -27,7 +27,7 @@
 //             4 Strings
 // const name = 'Egor'
 // console.log(name.length)
-// console.log(name.toUpperCase())
+// console.log(name.toUpperCase()) 
 // console.log(name.toLowerCase())
 // console.log(name.charAt(2))
 // console.log(name.indexOf('gorr'))  //поиск заданной строки в базовой строке
