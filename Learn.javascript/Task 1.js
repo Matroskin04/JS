@@ -1,13 +1,18 @@
 'use strict'
-function sumOfIntegersInString(s){
-  let sum = 0;
-  for ( let i = 0; i < s.length; i++ ) {
-    if (!isNaN(s[i])) {
-      let num = parseInt(s.slice(i));
-      i += num.toString().length - 1;
-      sum += num;
+function crashingWeights(grid){
+  
+  for ( j = 0; j < grid.length; j++ ) {
+    
+    for ( i = 0; i < grid[j].length; i++ ){
+      
+      if ( grid[j][i] > grid[j + 1].[i] ) {
+        grid[j + 1][i] += grid[j][i]
+      }
+    }
   }
-} console.log(sum)
-}
+  return grid[j]
+};
 
-sumOfIntegersInString('123asd123s2s0x1')
+crashingWeights([[1, 2, 3],
+  [2, 3, 1],
+  [3, 1, 2]])
