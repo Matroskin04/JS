@@ -1,9 +1,9 @@
 function camelize(str) {
-    let a = str.split('-')
-            .filter( item => item != false)
-            .map( (item, index) => index === 0 ? item : item[0].toUpperCase() + item.slice(1) )
-            .join('');
-    alert(a)
+    
+    return str.split('-')
+              .filter( item => item != false)
+              .map( (item, index) => index === 0 ? item : item[0].toUpperCase() + item.slice(1) )
+              .join('');
 }
 
 

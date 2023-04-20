@@ -34,8 +34,12 @@
 //     console.log('Курс готов')
 // }
 //             // 6 Функции
-function calculateAge(year){ 
-    return 2023 - year
+const filterRangeInPlace = (arr, a, b) => {
+    arr = arr.filter(e => e >= a && e <= b)
 }
-const myAge = calculateAge(2004)
-console.log(myAge)
+
+let arr = [5, 3, 8, 1];
+
+filterRangeInPlace(arr, 1, 4); // удалены числа вне диапазона 1..4
+
+alert( arr ); // [3, 1]
