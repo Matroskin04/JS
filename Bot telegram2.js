@@ -1,51 +1,48 @@
 const {Telegraf} = require('telegraf');
-const {session} = require('telegraf');
-const dotenv = require('dotenv');
-const {message} = require("telegraf/filters");
 
-// загрузить переменные окружения из файла .env
-dotenv.config()
+const bot = new Telegraf('6045348908:AAEk2TL4Wo0lmql_ntP9s_hjKAVWP71140o'); // замените 'BOT_TOKEN' на настоящий токен вашего бота
 
-const bot = new Telegraf(process.env.BOT_TOKEN);
+// создаем объекты, которые будут содержать информацию о пользователях, получивших доступ к чату
+let accessList = {};
 
-// объект для временного хранения состояния пользователя
-const userState = {};
+// обработчик команды для выдачи доступа пользователю
+bot.command('grant_access', (ctx) => {
+    const user = ctx.message.from;
+    const chatId = -933206111;
+    const duration = 60; // продолжительность доступа в секундах
 
-bot.use(session());
-// команда /grant для выдачи прав доступа
-bot.command('grant', (ctx) => {
-  console.log(ctx.message)
-  const fromId = ctx.message.from.id;
-  const chatId = '-933206111';
-  // проверяем существует ли состояние пользователя
-  if (!userState[fromId]) {
-    userState[fromId] = {};
-  }
-  // выставляем количество сообщений и время доступа
-  userState[fromId].messagesLeft = 10;
-  userState[fromId].expiration = Date.now() + 3600 * 1000; // доступ на час
-  // отвечаем пользователю
-  ctx.reply(`Вы получили права доступа на 10 сообщений в течение 1 часа`);
+    accessList[user.id] = {
+        chatId,
+        messagesLeft: 10, // количество сообщений, которые пользователь может написать в чате
+        expireAt: Date.now() + duration * 1000 // время окончания доступа в миллисекундах
+    };
+
+    ctx.reply(`${user.first_name} ${user.last_name ?? ''} получил доступ к чату на ${duration} секунд`);
 });
 
-// обработчик входящих сообщений
-bot.on('message', (ctx) => {
-  const fromId = ctx.message.from.id;
-  const chatId = ctx.message.chat.id;
-  // проверяем существует ли состояние пользователя
-  if (!userState[fromId]) {
-    userState[fromId] = {};
-  }
-  // проверяем, есть ли у пользователя доступ
-  if (userState[fromId].messagesLeft > 0 && userState[fromId].expiration > Date.now()) {
-    // уменьшаем количество доступных сообщений
-    userState[fromId].messagesLeft--;
-    // отправляем сообщение
-    ctx.telegram.sendMessage(`chatId, Осталось: ${userState[fromId].messagesLeft} сообщений`);
-  } else {
-    // уведомляем пользователя, что доступ закрыт
-    ctx.reply(`Доступ закрыт. Получить права доступа можно командой /grant`);
-  }
+// обработчик сообщений
+bot.on('message', async (ctx) => {
+    const user = ctx.message.from;
+    const chatId = -933206111;
+
+    if (accessList[user.id] && accessList[user.id].chatId === chatId) {
+        // если пользователь есть в списке доступа для этого чата
+        const access = accessList[user.id];
+
+        if (access.messagesLeft === 0 || Date.now() > access.expireAt) {
+            // если пользователь исчерпал количество сообщений или время доступа истекло
+            delete accessList[user.id];
+            ctx.reply(`${user.first_name} ${user.last_name ?? ''}, ваш доступ к чату закрыт`);
+        } else {
+            // если пользователь может отправить сообщение
+            access.messagesLeft--;
+            await ctx.telegram.sendMessage(chatId, ctx.message.text);
+        }
+    }
 });
 
-bot.launch();
+const botLaunch = async () => {
+    await bot.launch()
+}
+botLaunch()
+

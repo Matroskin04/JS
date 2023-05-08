@@ -1,6 +1,7 @@
 const {Telegraf} = require('telegraf');
 const {session} = require('telegraf');
 const dotenv = require('dotenv');
+const {message} = require("telegraf/filters");
 
 // загрузить переменные окружения из файла .env
 dotenv.config()
@@ -11,11 +12,11 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 const userState = {};
 
 bot.use(session());
-
 // команда /grant для выдачи прав доступа
 bot.command('grant', (ctx) => {
+  console.log(ctx.message)
   const fromId = ctx.message.from.id;
-  const chatId = ctx.message.chat.id;
+  const chatId = '-933206111';
   // проверяем существует ли состояние пользователя
   if (!userState[fromId]) {
     userState[fromId] = {};
