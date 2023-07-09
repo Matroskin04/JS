@@ -1,5 +1,8 @@
 const exp = function(numb, count) {
-    
+    //exit
+    if (count === 1) return numb;
+
+    return numb * exp(numb, count - 1);
 }
 
 
