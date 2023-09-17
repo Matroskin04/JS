@@ -58,3 +58,4 @@ let company = { // тот же самый объект, сжатый для кр
     }
   }
 console.log(sumSalaries(company))
+
