@@ -57,31 +57,16 @@
 
 // sum(tree)
 
+function countChange(amount, denominations) {
+  let ways = new Array(amount + 1).fill(0);
+  ways[0] = 1;
 
-function createTwoSetsOfEqualSum(n) {
-    const sum = ( n + 1 ) * n / 2
-    if ( sum % 2 !== 0 ) return [];
-    
-    let finallyArr = [];
-    let arr1 = [];
-    let arr2 = [];
-    
-    let sumOfarr = 0;
-    //sum/2 
-    for (let i = n; i > 0; i--) {
-      sumOfarr += i;
-      if (sumOfarr < sum / 2) arr1.push(i)
-      if (sumOfarr > sum / 2) {
-        sumOfarr -= i;
-        arr2.push(i)
-        }
-      if (sumOfarr = sum / 2) {
-        sumOfarr += 10000000;
-        arr1.push(i);
-        }
-    }
-    finallyArr.push(arr1)
-    finallyArr.push(arr2)
-    return finallyArr
+  for (let coin of denominations) {
+      for (let i = coin; i <= amount; i++) {
+          ways[i] += ways[i - coin];
+      }
   }
-  console.log(createTwoSetsOfEqualSum(8))
+
+  return ways[amount];
+}
+countChange(4, [1, 2])
