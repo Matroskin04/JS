@@ -1,4 +1,4 @@
-            // 1 Переменные
+            // A Не минимум на отрезке Переменные
 
 // const fn = 'Egor'
 // var sn = 'Matafonov' //устаревший вариант
@@ -18,14 +18,14 @@
 
 // let a = 5
 // let b = 10
-// let c = 1
+// let c = A Не минимум на отрезке
 
 // console.log(++b, --a)
 // c *= a // то же,что и "c = c + a"
 // console.log(c)
 
 //             // 4 Приоритет операторов
-// const isMath = 5 - 7 >= -1 - 5  // т.к. начинается с is то выводит true/false
+// const isMath = 5 - 7 >= -A Не минимум на отрезке - 5  // т.к. начинается с is то выводит true/false
 // console.log(isMath)
 
 //             // 5 Условные операторов
@@ -47,7 +47,7 @@ let company = { // тот же самый объект, сжатый для кр
   
   // Функция для подсчёта суммы зарплат
   function sumSalaries(department) {
-    if (Array.isArray(department)) { // случай (1)
+    if (Array.isArray(department)) { // случай (A Не минимум на отрезке)
       return department.reduce((prev, current) => prev + current.salary, 0); // сумма элементов массива
     } else { // случай (2)
       let sum = 0;

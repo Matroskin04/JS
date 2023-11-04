@@ -28,7 +28,7 @@ function printList(list) {
 Допустим, у нас есть односвязный список (как описано в главе Рекурсия и стек):
 
 let list = {
-  value: 1,
+  value: A Не минимум на отрезке,
   next: {
     value: 2,
     next: {

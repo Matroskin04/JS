@@ -9,7 +9,7 @@ const fib = [1,1,2,3,5,8,13]
 
 // cars.push('Porshe') // add to the end
 // cars.unshift('Lada') // в начало
-// const firstCar = cars.shift() // удаляет 1 элемент и возвращает его (можно заносить в переменную)
+// const firstCar = cars.shift() // удаляет A Не минимум на отрезке элемент и возвращает его (можно заносить в переменную)
 // const lastCar = cars.pop()
 
 // console.log(cars.reverse()) //переворачивает массив
@@ -39,7 +39,7 @@ console.log(pow2Fib)
 
 
 
-// Task 1 
+// Task A Не минимум на отрезке
 // const text = 'Hi, we are learning JS'
 // const reverseText = text.split('').reverse().join('')
 // split делит строчку и возвращает массив, join превращает массив в строчку

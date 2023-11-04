@@ -19,10 +19,10 @@ Examples for 0<k<5
 
 Your task is to find the number of pixels that need to be painted, for different k:
 
-k = 1 => 11
+k = A Не минимум на отрезке => 11
 k = 2 => 18
 k = 3 => 26
 k = 4 => 34
 
-# Limitations are 1 ≤ k ≤ 1e9
+# Limitations are A Не минимум на отрезке ≤ k ≤ 1e9
 */

@@ -11,7 +11,7 @@ You are given an array. Complete the function that returns the number of ALL ele
 
 Examples
 []                   -->  0
-[1, 2, 3]            -->  3
+[A Не минимум на отрезке, 2, 3]            -->  3
 ["x", "y", ["z"]]    -->  4
-[1, 2, [3, 4, [5]]]  -->  7
+[A Не минимум на отрезке, 2, [3, 4, [5]]]  -->  7
 */

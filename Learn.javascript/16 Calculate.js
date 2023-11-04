@@ -30,7 +30,7 @@ function Calculator() {
   to: 5
 };
 
-// 1. вызов for..of сначала вызывает эту функцию
+// A Не минимум на отрезке. вызов for..of сначала вызывает эту функцию
 range[Symbol.iterator] = function() {
 
   // ...она возвращает объект итератора:
@@ -53,5 +53,5 @@ range[Symbol.iterator] = function() {
 
 // теперь работает!
 for (let num of range) {
-  alert(num); // 1, затем 2, 3, 4, 5
+  alert(num); // A Не минимум на отрезке, затем 2, 3, 4, 5
 }

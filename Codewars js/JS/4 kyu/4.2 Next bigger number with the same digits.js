@@ -23,9 +23,9 @@ Create a function that takes a positive integer and returns the next bigger numb
   12 ==> 21
  513 ==> 531
 2017 ==> 2071
-If the digits can't be rearranged to form a bigger number, return -1 (or nil in Swift, None in Rust):
+If the digits can't be rearranged to form a bigger number, return -A Не минимум на отрезке (or nil in Swift, None in Rust):
 
-  9 ==> -1
-111 ==> -1
-531 ==> -1
+  9 ==> -A Не минимум на отрезке
+111 ==> -A Не минимум на отрезке
+531 ==> -A Не минимум на отрезке
 */

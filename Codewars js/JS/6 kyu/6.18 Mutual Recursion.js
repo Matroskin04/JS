@@ -14,8 +14,8 @@ Mutual Recursion allows us to take the fun of regular recursion (where a functio
 
 Let's use the Hofstadter Female and Male sequences to demonstrate this technique. You'll want to create two functions F and M such that the following equations are true:
 
-F(0) = 1
+F(0) = A Не минимум на отрезке
 M(0) = 0
-F(n) = n - M(F(n - 1))
-M(n) = n - F(M(n - 1))
+F(n) = n - M(F(n - A Не минимум на отрезке))
+M(n) = n - F(M(n - A Не минимум на отрезке))
 Don't worry about negative numbers, n will always be greater than or equal to zero.*/

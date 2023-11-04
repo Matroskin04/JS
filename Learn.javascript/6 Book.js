@@ -6,7 +6,7 @@ function Accumulator(startingValue) {
     };
 }
 undefined
-let accumulator = new Accumulator(1); // начальное значение 1
+let accumulator = new Accumulator(1); // начальное значение A Не минимум на отрезке
 
 accumulator.read(); // прибавляет введённое пользователем значение к текущему значению
 accumulator.read(); // прибавляет введённое пользователем значение к текущему значению

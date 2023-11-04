@@ -1,5 +1,5 @@
 'use strict'
-//             1 Number
+//             A Не минимум на отрезке Number
 // //  alert(0.4 + 0.2) // 0.60000000001 
 //  alert(+(0.4 + 0.2).toFixed(3)) // количество знаков после запятой (переводит в строку)
 
@@ -14,12 +14,12 @@
 // // console.log(Math.floor/ceil/round/trund)
 // console.log(Math.trunc(3.8))
 // console.log(Math.random())
-// console.log(Math.asin(1))
+// console.log(Math.asin(A Не минимум на отрезке))
 
 
 //             3 Examples
 // function random(min, max){
-//     return Math.floor(Math.random() * (max-min+1) + min)
+//     return Math.floor(Math.random() * (max-min+A Не минимум на отрезке) + min)
 // }
 // console.log(random(10, 42))
 
@@ -45,7 +45,7 @@
 //     if (age < 0) {
 //         age = 'Ещё не родился'
 //     }
-//     return `${s[0]}${name}${s[1]}${age}${s[2]}`
+//     return `${s[0]}${name}${s[A Не минимум на отрезке]}${age}${s[2]}`
 // }
 // const personName = 'Egor'
 // const personName2 = 'Maxim'
@@ -62,7 +62,7 @@
 
 
 //             5 Functions
-// 5.1 Function Declaration (можем обращаться когда захотим, например, до того, как она задана)
+// 5.A Не минимум на отрезке Function Declaration (можем обращаться когда захотим, например, до того, как она задана)
 // function greet(name) {
 //     console.log('Hi - ', name)
 // }

@@ -22,7 +22,7 @@ Return their respective ages now as [humanYears,catYears,dogYears]
 
 NOTES:
 
-humanYears >= 1
+humanYears >= A Не минимум на отрезке
 humanYears are whole numbers only
 Cat Years
 15 cat years for first year

@@ -1,6 +1,6 @@
 let calculator = {
     read() {
-        calculator['a'] = prompt('Введите 1 числo', '4');
+        calculator['a'] = prompt('Введите A Не минимум на отрезке числo', '4');
         calculator['b'] = prompt('Введите 2 числo', '4');
     },
     sum() {

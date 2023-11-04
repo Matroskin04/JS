@@ -7,11 +7,11 @@
 // let a = {name: 'john'}
 // let map = new WeakMap()
 // map.set(a, 'hi')
-// a = 1
+// a = A Не минимум на отрезке
 // console.log(map)
 
 // const tree = {
-//   val: 1,
+//   val: A Не минимум на отрезке,
 //   left: {
 //       val: 2,
 //       left: {
@@ -39,7 +39,7 @@
 // }
 
 // function sum(obj) {
-//   if (Object.keys(obj).length === 1) {
+//   if (Object.keys(obj).length === A Не минимум на отрезке) {
 //       return obj.val
 //   }
 
