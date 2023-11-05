@@ -2,13 +2,7 @@ const { createInterface } = require("readline");
 
 const lines = [];
 
-//version 1
-function isAnagramV1(str1, str2) {
-    return str1.split('').sort().join('') === str2.split('').sort().join('') ? 'YES' : 'NO';
-}
-
-//version
-function isAnagramV2(str1, str2) {
+function isAnagram(str1, str2) {
     return str1.split('').sort().join('') === str2.split('').sort().join('') ? 'YES' : 'NO';
 }
 createInterface({
@@ -18,6 +12,6 @@ createInterface({
     lines.push(line.toString().trim());
 }).on("close", () => {
     const [str1, str2] = lines;
-    const result = isAnagramV2(str1, str2);
+    const result = isAnagram(str1, str2);
     console.log(result)
 })
