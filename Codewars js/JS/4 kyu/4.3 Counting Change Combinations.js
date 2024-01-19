@@ -1,6 +1,6 @@
 function countChange(amount, denominations) {
     let ways = new Array(amount + 1).fill(0);
-    ways[0] = 1;
+    ways[0] = 1; 
 
     for (let coin of denominations) {
         for (let i = coin; i <= amount; i++) {
